@@ -103,6 +103,15 @@
       }
     }
   </style>
+  <script>
+    // Detect if the user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // Dynamically load the appropriate script
+    const script = document.createElement('script');
+    script.src = isMobile ? './mobile.js' : './script.js';
+    document.head.appendChild(script);
+  </script>
 </head>
 <body>
 
@@ -112,7 +121,7 @@
 </div>
 
 <div class="paper image">
-  <p>and I fallen in</p>
+  <p>always in</p>
   <p>Love with You 😍 </p>
   <img src="images/1.jpeg" alt="Image 1" />
 </div>
@@ -147,8 +156,6 @@
 <a href="page2.html">
   <button id="showNoteButton">Click Me</button>
 </a>
-
-<script src="./mobile.js"></script>
 
 </body>
 </html>
